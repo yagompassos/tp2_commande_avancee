@@ -71,7 +71,7 @@ end
 # appel à optimisation
 pa = (Pos_init[1], Pos_init[3])
 pb = (Pos_ref[1], Pos_ref[3])
-c_opt = trajectory_optimization(pa, pb, circle1, circle2, r1, r2)
+@time c_opt = trajectory_optimization(pa, pb, circle1, circle2, r1, r2)
 p = Polynomial(c_opt)
 println(p)
 

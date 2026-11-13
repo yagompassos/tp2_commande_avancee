@@ -39,7 +39,7 @@ end
 theta=Optim.minimizer(results)
 
 println("2. Valeur trouvé!\nMouvement vers le Pos_ref...")
-controlrobot(theta, clientID, simx_opmode_oneshot, simx_opmode_oneshot, 7, objectname_kuka)
+@time controlrobot(theta, clientID, simx_opmode_oneshot, simx_opmode_oneshot, 7, objectname_kuka)
 sleep(2)
 
 
